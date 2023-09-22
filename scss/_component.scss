@@ -1,0 +1,93 @@
+
+.card {
+    max-width: 400px;
+    border-radius: 20px;
+    background-color: $very_pale_blue;
+    
+    overflow: hidden;
+
+    &__image-container{
+        width: 100%;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            
+            object-fit: cover;
+        }
+    }
+
+    &__info-container {
+        padding: 1.5em;
+
+        display: grid;
+        gap: 2rem;
+
+        .text-container {
+            text-align: center;
+
+            display: grid;
+            gap: 1.5rem;
+            font-size: 18px;
+        
+            .card__title {
+                font-size: 1.7rem;
+                font-weight: 900;
+                color: $dark_blue;
+            }
+
+            .card__desc {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: $desaturated_blue;
+            }
+        }
+
+        .pill {
+            width: 100%;
+
+            padding: 1rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+            background-color: #e7ebfac0;
+            
+            border-radius: 15px;
+        
+            .icon-info {
+                display: flex;
+                gap: 1.25rem;
+                
+                .icon_title {
+                    font-weight: 900;
+                    color: $dark_blue;
+                    font-size: .925rem;
+                    padding-bottom: 2px;
+                }
+                
+                .icon_price {
+                    font-size: .925rem;
+                    color: $desaturated_blue;
+                }
+            }
+
+            .link {
+                font-size: 0.925rem;
+                font-weight: 700;
+                color: $bright_blue;
+
+                &:hover {
+                    color: lighten($color: $bright_blue, $amount: 20%);
+                }
+            }
+        }
+
+        .btn-container {
+            width: 100%;
+            display: grid;
+            gap: .7em;
+        }
+    }
+}
